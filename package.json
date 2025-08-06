@@ -1,0 +1,52 @@
+{
+  "name": "portfolio",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "oxlint",
+    "compose:up": "docker compose up -d",
+    "migrate": "npx prisma migrate dev && npx migrate generate",
+    "migrate:reset": "npx prisma migrate reset --force",
+    "migrate:create-only": "npx prisma migrate dev --create-only"
+  },
+  "dependencies": {
+    "@formatjs/intl-localematcher": "^0.8.0",
+    "@heroui/react": "^2.8.7",
+    "@prisma/adapter-pg": "^7.3.0",
+    "@prisma/client": "^7.3.0",
+    "@vercel/postgres": "^0.10.0",
+    "better-auth": "^1.4.17",
+    "clsx": "^2.1.1",
+    "dotenv": "^17.2.3",
+    "framer-motion": "^12.28.2",
+    "lucide-react": "^0.562.0",
+    "next": "^16.1.4",
+    "next-intl": "^4.7.0",
+    "pg": "^8.17.2",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "swr": "^2.3.8",
+    "tailwind-merge": "^3.4.0",
+    "zod": "^4.3.5",
+    "zustand": "^5.0.10"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.3.11",
+    "@tailwindcss/postcss": "^4",
+    "@types/negotiator": "^0.6.4",
+    "@types/node": "^20",
+    "@types/pg": "^8.16.0",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "oxlint": "^1.41.0",
+    "prisma": "^6.19.2",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  },
+  "lint-staged": {
+    "**/*.{js,mjs,cjs,jsx,ts,mts,cts,tsx}": "oxlint"
+  }
+}
